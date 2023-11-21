@@ -4,12 +4,11 @@ import { ClimbingBoxLoader } from "react-spinners";
 
 const SignUpForm = () => {
   const [user, setUser] = useState({
+    password: "",
     email: "",
     userName: "",
-    password: "",
   });
   const [userLoader, setUserLoader] = useState(false);
-
   const handleSignUp = () => {
     setUserLoader(true);
     signUp(user)
@@ -24,18 +23,20 @@ const SignUpForm = () => {
       });
   };
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center h-screen text-white">
       <h1>Sign Up</h1>
-      <div>
+      <div className="flex flex-col w-fit border-2 border-gray-400 rounded-md py-5 px-5">
         <input
+          className=" outline-none bg-transparent"
           onChange={(e) => {
             setUser((prev) => ({ ...prev, [e.target.name]: e.target.value }));
           }}
           type="email"
-          placeholder="Email"
+          placeholder="email"
           name="email"
         />
         <input
+          className=" outline-none bg-transparent"
           onChange={(e) => {
             setUser((prev) => ({ ...prev, [e.target.name]: e.target.value }));
           }}
@@ -43,6 +44,7 @@ const SignUpForm = () => {
           placeholder="UserName"
         />
         <input
+          className=" outline-none bg-transparent"
           name="password"
           placeholder="Password"
           type="password"
@@ -50,9 +52,12 @@ const SignUpForm = () => {
             setUser((prev) => ({ ...prev, [e.target.name]: e.target.value }));
           }}
         />
-        {userLoader && <ClimbingBoxLoader />}
-        <button onClick={handleSignUp}>Sign Up</button>
+
+        <button className=" outline-none" onClick={handleSignUp}>
+          Sign Up
+        </button>
       </div>
+      {userLoader && <ClimbingBoxLoader />}
     </div>
   );
 };

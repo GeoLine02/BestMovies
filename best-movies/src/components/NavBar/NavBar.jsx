@@ -20,16 +20,13 @@ const NavBar = () => {
           <h1 className="text-3xl">BestMovies</h1>
           <ul>
             <li>
-              <NavLink>1</NavLink>
+              <NavLink>Films</NavLink>
             </li>
             <li>
-              <NavLink>2</NavLink>
+              <NavLink>TV Series</NavLink>
             </li>
             <li>
-              <NavLink>3</NavLink>
-            </li>
-            <li>
-              <NavLink>4</NavLink>
+              <NavLink>Favorites</NavLink>
             </li>
             <button>Sign Out</button>
           </ul>
@@ -46,16 +43,13 @@ const NavBar = () => {
           <h1 className="text-3xl">BestMovies</h1>
           <ul className="hidden gap-4 md:flex">
             <li>
-              <NavLink>1</NavLink>
+              <NavLink>Films</NavLink>
             </li>
             <li>
-              <NavLink>2</NavLink>
+              <NavLink>TV Series</NavLink>
             </li>
             <li>
-              <NavLink>3</NavLink>
-            </li>
-            <li>
-              <NavLink>4</NavLink>
+              <NavLink>Favorites</NavLink>
             </li>
             <button
               onClick={() => {
@@ -91,16 +85,13 @@ const NavBar = () => {
         >
           <ul className="flex flex-col gap-4 items-center py-1">
             <li>
-              <NavLink>1</NavLink>
+              <NavLink>Films</NavLink>
             </li>
             <li>
-              <NavLink>2</NavLink>
+              <NavLink>TV Series</NavLink>
             </li>
             <li>
-              <NavLink>3</NavLink>
-            </li>
-            <li>
-              <NavLink>4</NavLink>
+              <NavLink>Favorites</NavLink>
             </li>
           </ul>
           <button>Sign Out</button>
@@ -115,17 +106,15 @@ const NavBar = () => {
         >
           <ul className="flex flex-col gap-4 items-center py-1">
             <li>
-              <NavLink>1</NavLink>
+              <NavLink>Films</NavLink>
             </li>
             <li>
-              <NavLink>2</NavLink>
+              <NavLink>TV Series</NavLink>
             </li>
             <li>
-              <NavLink>3</NavLink>
+              <NavLink>Favorites</NavLink>
             </li>
-            <li>
-              <NavLink>4</NavLink>
-            </li>
+
             <button
               onClick={() => {
                 navigate(routes.signIn);

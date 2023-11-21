@@ -12,3 +12,10 @@ export const signOutAction = () => {
     type: actions.signOut,
   };
 };
+
+export const addToFavoritesAction = (payload) => {
+  return {
+    type: actions.addToFavorites,
+    payload,
+  };
+};
