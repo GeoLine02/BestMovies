@@ -19,3 +19,23 @@ export const addToFavoritesAction = (payload) => {
     payload,
   };
 };
+
+export const startMovisFetchingLoaderAction = () => {
+  return {
+    type: actions.startMoviesFetchingLoader,
+  };
+};
+
+export const reportMoviesFetchingError = (payload) => {
+  return {
+    type: actions.reportMoviesFetchError,
+    payload,
+  };
+};
+
+export const saveMoviesDataAction = (payload) => {
+  return {
+    type: actions.saveMovies,
+    payload,
+  };
+};

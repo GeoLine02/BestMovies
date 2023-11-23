@@ -16,11 +16,11 @@ const NavBar = () => {
   return (
     <nav>
       {isUserAuthenticated ? (
-        <div className="">
+        <div className="flex items-center justify-between max-w-[1440px] mx-auto ">
           <h1 className="text-3xl">BestMovies</h1>
-          <ul>
+          <ul className="hidden gap-4 md:flex">
             <li>
-              <NavLink>Films</NavLink>
+              <NavLink to={routes.movies}>Films</NavLink>
             </li>
             <li>
               <NavLink>TV Series</NavLink>
@@ -93,8 +93,8 @@ const NavBar = () => {
             <li>
               <NavLink>Favorites</NavLink>
             </li>
+            <button>Sign Out</button>
           </ul>
-          <button>Sign Out</button>
         </div>
       ) : (
         <div

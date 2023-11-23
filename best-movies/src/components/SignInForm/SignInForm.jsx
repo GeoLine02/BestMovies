@@ -21,7 +21,6 @@ const SignInForm = () => {
       .then((data) => {
         console.log(data);
         dispatch(signInAction(data.token));
-        navigate(routes.movies);
       })
       .catch((err) => {
         console.log(err);

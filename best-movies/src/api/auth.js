@@ -4,7 +4,7 @@ export async function signUp(user) {
     {
       method: "POST",
       body: JSON.stringify(user),
-      headers: { "content-type": "aplication/json" },
+      headers: { "content-type": "application/json" },
     }
   );
   if (res.ok) {
