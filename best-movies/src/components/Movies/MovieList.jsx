@@ -4,10 +4,16 @@ import { useAppContext } from "../../context/AppContextProvider";
 const MovieList = () => {
   const { state } = useAppContext();
   return (
-    <div>
-      <h1>Mvoie List</h1>
-      {state.movies.map((movie, index) => {
-        return <Movie key={index} name={movie.name} />;
+    <div className="flex flex-wrap gap-4 justify-center items-center">
+      {state.movies.map((movie) => {
+        return (
+          <Movie
+            key={movie.rank}
+            title={movie.title}
+            image={movie.image}
+            rating={movie.rating}
+          />
+        );
       })}
     </div>
   );

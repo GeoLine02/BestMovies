@@ -25,7 +25,7 @@ const SignUpForm = () => {
   return (
     <div className="flex flex-col justify-center items-center h-screen text-white">
       <h1>Sign Up</h1>
-      <div className="flex flex-col w-fit border-2 border-gray-400 rounded-md py-5 px-5">
+      <div className="flex flex-col w-fit border-2 border-gray-400 rounded-md py-5 px-5 gap-5">
         <input
           className=" outline-none bg-transparent"
           onChange={(e) => {
@@ -53,7 +53,10 @@ const SignUpForm = () => {
           }}
         />
 
-        <button className=" outline-none" onClick={handleSignUp}>
+        <button
+          className="border-2 rounded-md border-gray-400 hover:bg-white hover:text-black"
+          onClick={handleSignUp}
+        >
           Sign Up
         </button>
       </div>

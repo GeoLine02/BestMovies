@@ -6,7 +6,7 @@ import Favorites from "../pages/Favorites/Favorites";
 import Movies from "../pages/Movies/Movies";
 import AuthGuard from "../Guard/AuthGuard";
 import NotFound from "../pages/NotFound/NotFound";
-
+import MovieDetails from "../pages/MovieDetails/MovieDetails";
 const appRoutes = [
   {
     path: routes.home,
@@ -28,6 +28,11 @@ const appRoutes = [
   {
     path: routes.favorites,
     Component: Favorites,
+    Guard: AuthGuard,
+  },
+  {
+    path: `${routes.movies}/:movie`,
+    Component: MovieDetails,
     Guard: AuthGuard,
   },
   {

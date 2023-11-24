@@ -19,6 +19,7 @@ const SignInForm = () => {
     setUserLoader(true);
     signIn(user)
       .then((data) => {
+        navigate(routes.movies);
         console.log(data);
         dispatch(signInAction(data.token));
       })
@@ -30,13 +31,14 @@ const SignInForm = () => {
       });
   };
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center h-screen text-white">
       <h1>Sign In</h1>
-      <div>
+      <div className="flex flex-col w-fit border-2 border-gray-400 rounded-md py-5 px-5 gap-5">
         <input
           type="text"
           name="userName"
           placeholder="Username"
+          className=" outline-none bg-transparent"
           onChange={(e) => {
             setUser((prev) => ({ ...prev, [e.target.name]: e.target.value }));
           }}
@@ -45,13 +47,20 @@ const SignInForm = () => {
           type="password"
           name="password"
           placeholder="Password"
+          className=" outline-none bg-transparent"
           onChange={(e) => {
             setUser((prev) => ({ ...prev, [e.target.name]: e.target.value }));
           }}
         />
-        {userLoader && <ClimbingBoxLoader />}
-        <button onClick={handleSignIn}>Sign In</button>
+
+        <button
+          className="border-2 rounded-md border-gray-400 hover:bg-white hover:text-black"
+          onClick={handleSignIn}
+        >
+          Sign In
+        </button>
       </div>
+      {userLoader && <ClimbingBoxLoader />}
     </div>
   );
 };

@@ -3,9 +3,11 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { useAppContext } from "../../context/AppContextProvider";
 import routes from "../../constants/routes";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { signOutAction } from "../../context/actions/actionCreator";
 const NavBar = () => {
   const {
     state: { isUserAuthenticated },
+    dispatch,
   } = useAppContext();
   const navigate = useNavigate();
   const [burger, setBurger] = useState(false);
@@ -26,9 +28,15 @@ const NavBar = () => {
               <NavLink>TV Series</NavLink>
             </li>
             <li>
-              <NavLink>Favorites</NavLink>
+              <NavLink to={routes.favorites}>Favorites</NavLink>
             </li>
-            <button>Sign Out</button>
+            <button
+              onClick={() => {
+                dispatch(signOutAction());
+              }}
+            >
+              Sign Out
+            </button>
           </ul>
           <div onClick={handleBurger} className="md:hidden cursor-pointer">
             {burger ? (
@@ -43,13 +51,13 @@ const NavBar = () => {
           <h1 className="text-3xl">BestMovies</h1>
           <ul className="hidden gap-4 md:flex">
             <li>
-              <NavLink>Films</NavLink>
+              <NavLink to={routes.movies}>Films</NavLink>
             </li>
             <li>
               <NavLink>TV Series</NavLink>
             </li>
             <li>
-              <NavLink>Favorites</NavLink>
+              <NavLink to={routes.favorites}>Favorites</NavLink>
             </li>
             <button
               onClick={() => {
@@ -85,15 +93,21 @@ const NavBar = () => {
         >
           <ul className="flex flex-col gap-4 items-center py-1">
             <li>
-              <NavLink>Films</NavLink>
+              <NavLink to={routes.movies}>Films</NavLink>
             </li>
             <li>
               <NavLink>TV Series</NavLink>
             </li>
             <li>
-              <NavLink>Favorites</NavLink>
+              <NavLink to={routes.favorites}>Favorites</NavLink>
             </li>
-            <button>Sign Out</button>
+            <button
+              onClick={() => {
+                dispatch(signOutAction());
+              }}
+            >
+              Sign Out
+            </button>
           </ul>
         </div>
       ) : (
@@ -106,13 +120,13 @@ const NavBar = () => {
         >
           <ul className="flex flex-col gap-4 items-center py-1">
             <li>
-              <NavLink>Films</NavLink>
+              <NavLink to={routes.movies}>Films</NavLink>
             </li>
             <li>
               <NavLink>TV Series</NavLink>
             </li>
             <li>
-              <NavLink>Favorites</NavLink>
+              <NavLink to={routes.favorites}>Favorites</NavLink>
             </li>
 
             <button
