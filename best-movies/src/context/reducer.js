@@ -5,10 +5,13 @@ import { checkToken } from "../utils/tokenChecker";
 export const initialState = {
   isUserAuthenticated: false,
   isMoviesDataFetching: false,
+  isMovieDetailsFetching: false,
+  fetchMovieDetailsError: "",
   fetchMoviesError: "",
   user: {},
   favorites: [],
   movies: [],
+  movieDetails: [],
 };
 
 export const appContextReducer = (state = initialState, actions) => {
@@ -41,6 +44,29 @@ export const appContextReducer = (state = initialState, actions) => {
       return {
         ...state,
         isMoviesDataFetching: true,
+      };
+    }
+
+    case appContextActions.startMoviesDetailsFetchingLoader: {
+      return {
+        ...state,
+        isMovieDetailsFetching: true,
+      };
+    }
+
+    case appContextActions.saveMovieDetails: {
+      return {
+        ...state,
+        movieDetails: actions.payload,
+        isMovieDetailsFetching: false,
+      };
+    }
+
+    case appContextActions.reportMovieDetailsFetchError: {
+      return {
+        ...state,
+        fetchMovieDetailsError: actions.payload,
+        isMovieDetailsFetching: false,
       };
     }
     default:

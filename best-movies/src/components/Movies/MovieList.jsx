@@ -12,6 +12,7 @@ const MovieList = () => {
             title={movie.title}
             image={movie.image}
             rating={movie.rating}
+            rank={movie.rank}
           />
         );
       })}

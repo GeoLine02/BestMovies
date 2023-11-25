@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import routes from "../../constants/routes";
 const Movie = ({ title, image, rank, rating }) => {
   const navigate = useNavigate();
