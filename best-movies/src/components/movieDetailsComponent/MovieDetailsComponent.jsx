@@ -8,16 +8,12 @@ const MovieDetailsComponent = () => {
   const [movieDetails, SetMovieDetails] = useState(null);
   const [youtubeId, setYoutubeId] = useState(null);
   const { movie } = useParams();
-  const { state, dispatch } = useAppContext();
-  // const opts = {
-  //   height: [360, ],
-  //   width: [480, ],
+  const { dispatch } = useAppContext();
 
-  // };
   useEffect(() => {
     fetchData(`https://imdb-top-100-movies.p.rapidapi.com/top${movie}`, {
       headers: {
-        "X-RapidAPI-Key": "f523bba733msh12f90062045b9cfp12aa49jsn5e70c5a259c3",
+        "X-RapidAPI-Key": "df00421414msh9978d2a5f6d5141p15b601jsn86992a8930aa",
         "X-RapidAPI-Host": "imdb-top-100-movies.p.rapidapi.com",
       },
     })
@@ -30,7 +26,7 @@ const MovieDetailsComponent = () => {
       });
   }, [movie]);
   return (
-    <div>
+    <div className="h-full customMovieDetails:h-screen">
       {movieDetails && (
         <div className="flex flex-wrap gap-4 justify-center">
           <div>

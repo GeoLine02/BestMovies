@@ -68,7 +68,15 @@ export const appContextReducer = (state = initialState, actions) => {
         isMovieDetailsFetching: false,
       };
     }
+
     case appContextActions.addToFavorites: {
+      return {
+        ...state,
+        favorites: [...state.favorites, actions.payload],
+      };
+    }
+
+    case appContextActions.deleteFavorite: {
       return {
         ...state,
         favorites: [...state.favorites, actions.payload],

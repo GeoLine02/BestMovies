@@ -8,6 +8,7 @@ const startMoviesFetchingLoader = "START_MOVIES_FETCHING_LOADER";
 const startMoviesDetailsFetchingLoader = "START_MOVIES_DETAILS_FETCHING_LOADER";
 const saveMovieDetails = "SAVE_MOVIE_DETAILS";
 const reportMovieDetailsFetchError = "REPORT_MOVIES_DETAILS_FETCH_ERROR";
+const deleteFavorite = "DELETE_FAVORITE";
 
 const appContextActions = {
   signIn,
@@ -20,6 +21,7 @@ const appContextActions = {
   startMoviesDetailsFetchingLoader,
   saveMovieDetails,
   reportMovieDetailsFetchError,
+  deleteFavorite,
 };
 
 export default appContextActions;

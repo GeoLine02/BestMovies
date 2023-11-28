@@ -3,14 +3,16 @@ import NavBar from "../../components/NavBar/NavBar";
 import { useAppContext } from "../../context/AppContextProvider";
 import routes from "../../constants/routes";
 import { useNavigate } from "react-router-dom";
+import { deleteFavoriteAction } from "../../context/actions/actionCreator";
 
 const Favorites = () => {
   const navigate = useNavigate();
   const {
     state: { favorites },
+    dispatch,
   } = useAppContext();
   return (
-    <div className="h-screen sm:h-full">
+    <div className="h-screen ">
       <header>
         <NavBar />
       </header>
@@ -32,6 +34,9 @@ const Favorites = () => {
               <div className="flex justify-between">
                 <p>{movie.title}</p>
                 <p>imdb {movie.rating}</p>
+              </div>
+              <div>
+                <button>Delete</button>
               </div>
             </div>
           );

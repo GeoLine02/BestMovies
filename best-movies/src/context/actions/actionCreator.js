@@ -26,6 +26,12 @@ export const addToFavoritesAction = (payload) => {
   };
 };
 
+export const deleteFavoriteAction = () => {
+  return {
+    type: actions.deleteFavorite,
+  };
+};
+
 // // Favorites
 
 // Movies Fetching
