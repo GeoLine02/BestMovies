@@ -11,7 +11,6 @@ export const initialState = {
   user: {},
   favorites: [],
   movies: [],
-  movieDetails: [],
 };
 
 export const appContextReducer = (state = initialState, actions) => {
@@ -67,6 +66,12 @@ export const appContextReducer = (state = initialState, actions) => {
         ...state,
         fetchMovieDetailsError: actions.payload,
         isMovieDetailsFetching: false,
+      };
+    }
+    case appContextActions.addToFavorites: {
+      return {
+        ...state,
+        favorites: [...state.favorites, actions.payload],
       };
     }
     default:
