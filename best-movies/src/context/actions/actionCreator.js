@@ -26,9 +26,10 @@ export const addToFavoritesAction = (payload) => {
   };
 };
 
-export const deleteFavoriteAction = () => {
+export const deleteFavoriteAction = (movieId) => {
   return {
     type: actions.deleteFavorite,
+    payload: movieId,
   };
 };
 

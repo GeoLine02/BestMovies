@@ -79,7 +79,9 @@ export const appContextReducer = (state = initialState, actions) => {
     case appContextActions.deleteFavorite: {
       return {
         ...state,
-        favorites: [...state.favorites, actions.payload],
+        favorites: state.favorites.filter(
+          (movie) => movie.rank !== actions.payload
+        ),
       };
     }
     default:

@@ -9,7 +9,7 @@ export function fetchMoviesData(dispatch) {
   dispatch(startMovisFetchingLoaderAction());
   fetchData("https://imdb-top-100-movies.p.rapidapi.com/top100movies", {
     headers: {
-      "X-RapidAPI-Key": "df00421414msh9978d2a5f6d5141p15b601jsn86992a8930aa",
+      "X-RapidAPI-Key": "bfef258413msh898f41fd5ab9a92p179abdjsn1508506c91e8",
       "X-RapidAPI-Host": "imdb-top-100-movies.p.rapidapi.com",
     },
   })

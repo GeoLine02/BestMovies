@@ -4,6 +4,7 @@ import { useAppContext } from "../../context/AppContextProvider";
 import routes from "../../constants/routes";
 import { useNavigate } from "react-router-dom";
 import { deleteFavoriteAction } from "../../context/actions/actionCreator";
+import appContextActions from "../../context/actions/actions";
 
 const Favorites = () => {
   const navigate = useNavigate();
@@ -11,8 +12,12 @@ const Favorites = () => {
     state: { favorites },
     dispatch,
   } = useAppContext();
+
+  const handleDelete = (movieId) => {
+    dispatch({ type: appContextActions.deleteFavorite, payload: movieId });
+  };
   return (
-    <div className="h-screen ">
+    <div className="h-full sm:h-screen">
       <header>
         <NavBar />
       </header>
@@ -36,7 +41,13 @@ const Favorites = () => {
                 <p>imdb {movie.rating}</p>
               </div>
               <div>
-                <button>Delete</button>
+                <button
+                  onClick={() => {
+                    handleDelete(movie.rank);
+                  }}
+                >
+                  Delete
+                </button>
               </div>
             </div>
           );
