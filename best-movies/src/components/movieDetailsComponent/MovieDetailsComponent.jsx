@@ -38,7 +38,7 @@ const MovieDetailsComponent = () => {
                   onClick={() => {
                     dispatch(addToFavoritesAction(movieDetails));
                   }}
-                  className="flex mx-auto border-2 border-gray-400 rounded-md py-3 px-3 hover:bg-white hover:text-black"
+                  className="flex mx-auto border-2 border-gray-400 rounded-md py-3 px-3 hover:bg-white hover:text-black mt-3"
                 >
                   Add to favorites
                 </button>
@@ -51,10 +51,12 @@ const MovieDetailsComponent = () => {
               <p>year: {movieDetails.year}</p>
               <p>genre: {movieDetails.genre}</p>
               <p>director: {movieDetails.director}</p>
-              <p>description: {movieDetails.description}</p>
+              <p className="">description: {movieDetails.description}</p>
             </div>
-            <div className="mt-5">
-              {youtubeId && <YouTube videoId={youtubeId} />}
+            <div className="mt-5 video-container">
+              {youtubeId && (
+                <YouTube videoId={youtubeId} className="video-responsive" />
+              )}
             </div>
           </div>
         </div>
