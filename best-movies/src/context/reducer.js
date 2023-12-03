@@ -70,10 +70,15 @@ export const appContextReducer = (state = initialState, actions) => {
     }
 
     case appContextActions.addToFavorites: {
-      return {
-        ...state,
-        favorites: [...state.favorites, actions.payload],
-      };
+      const isMovieInFavorites = state.favorites.some(
+        (movie) => movie.id === actions.payload.id
+      );
+      if (!isMovieInFavorites) {
+        return {
+          ...state,
+          favorites: [...state.favorites, actions.payload],
+        };
+      }
     }
 
     case appContextActions.deleteFavorite: {

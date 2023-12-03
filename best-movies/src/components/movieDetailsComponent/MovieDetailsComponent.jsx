@@ -13,7 +13,7 @@ const MovieDetailsComponent = () => {
   useEffect(() => {
     fetchData(`https://imdb-top-100-movies.p.rapidapi.com/top${movie}`, {
       headers: {
-        "X-RapidAPI-Key": "bfef258413msh898f41fd5ab9a92p179abdjsn1508506c91e8",
+        "X-RapidAPI-Key": "f972f2e36emsh4b308c54fbf1050p19cd04jsnee23d04617b1",
         "X-RapidAPI-Host": "imdb-top-100-movies.p.rapidapi.com",
       },
     })
@@ -25,6 +25,11 @@ const MovieDetailsComponent = () => {
         console.log(error);
       });
   }, [movie]);
+
+  const handleAddFavorites = () => {
+    dispatch(addToFavoritesAction(movieDetails));
+  };
+
   return (
     <div className="h-full customMovieDetails:h-screen">
       {movieDetails && (
@@ -35,9 +40,7 @@ const MovieDetailsComponent = () => {
               <h1 className="text-3xl">{movieDetails.title}</h1>
               <div>
                 <button
-                  onClick={() => {
-                    dispatch(addToFavoritesAction(movieDetails));
-                  }}
+                  onClick={handleAddFavorites}
                   className="flex mx-auto border-2 border-gray-400 rounded-md py-3 px-3 hover:bg-white hover:text-black mt-3"
                 >
                   Add to favorites

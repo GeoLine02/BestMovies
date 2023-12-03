@@ -16,11 +16,17 @@ const Favorites = () => {
     dispatch({ type: appContextActions.deleteFavorite, payload: movieId });
   };
   return (
-    <div className="h-full sm:h-screen">
+    <div
+      className={
+        favorites.length >= 2
+          ? "h-full  customFavoritesXL:h-screen"
+          : "h-screen"
+      }
+    >
       <header className="py-3 px-3">
         <NavBar />
       </header>
-      <main className="flex flex-wrap gap-4 justify-center md:justify-normal mt-5 px-4">
+      <main className="flex flex-wrap gap-4 justify-center mt-5 px-4">
         {favorites.map((movie) => {
           return (
             <div className="mb-3" key={movie.rank}>

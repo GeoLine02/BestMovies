@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       screens: {
         customMovieDetails: "1300px", // custom large screen
+        customFavoritesXL: "1204px", // custom medium screen
       },
     },
   },
