@@ -13,7 +13,7 @@ const MovieDetailsComponent = () => {
   useEffect(() => {
     fetchData(`https://imdb-top-100-movies.p.rapidapi.com/top${movie}`, {
       headers: {
-        "X-RapidAPI-Key": "f972f2e36emsh4b308c54fbf1050p19cd04jsnee23d04617b1",
+        "X-RapidAPI-Key": "eb4f4c06bemsh10b96774f0a912ep1fc169jsnf77f6f60b7cd",
         "X-RapidAPI-Host": "imdb-top-100-movies.p.rapidapi.com",
       },
     })
