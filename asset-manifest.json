@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/BestMovies/static/css/main.4e3f5994.css",
+    "main.js": "/BestMovies/static/js/main.11fdc960.js",
+    "index.html": "/BestMovies/index.html",
+    "main.4e3f5994.css.map": "/BestMovies/static/css/main.4e3f5994.css.map",
+    "main.11fdc960.js.map": "/BestMovies/static/js/main.11fdc960.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4e3f5994.css",
+    "static/js/main.11fdc960.js"
+  ]
+}
