@@ -11,6 +11,7 @@ export const initialState = {
   user: {},
   favorites: [],
   movies: [],
+  movieDetails: [],
 };
 
 export const appContextReducer = (state = initialState, actions) => {
@@ -69,18 +70,19 @@ export const appContextReducer = (state = initialState, actions) => {
       };
     }
 
-    case appContextActions.addToFavorites: {
-      const isMovieInFavorites = state.favorites.some(
-        (movie) => movie.id === actions.payload.id
-      );
-      if (!isMovieInFavorites) {
-        return {
-          ...state,
-          favorites: [...state.favorites, actions.payload],
-        };
+    case appContextActions.addToFavorites:
+      {
+        const isMovieInFavorites = state.favorites.some(
+          (movie) => movie.id === actions.payload.id
+        );
+        if (!isMovieInFavorites) {
+          return {
+            ...state,
+            favorites: [...state.favorites, actions.payload],
+          };
+        }
       }
-    }
-
+      break;
     case appContextActions.deleteFavorite: {
       return {
         ...state,
@@ -89,6 +91,7 @@ export const appContextReducer = (state = initialState, actions) => {
         ),
       };
     }
+
     default:
       return state;
   }

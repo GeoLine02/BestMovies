@@ -16,7 +16,7 @@ const Movie = ({ title, image, rank, rating }) => {
           alt={title}
         />
       </div>
-      <div className="flex justify-between">
+      <div className="flex justify-between mt-2">
         <p>{title}</p>
         <p>imdb {rating}</p>
       </div>

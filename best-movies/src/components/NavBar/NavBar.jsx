@@ -18,7 +18,7 @@ const NavBar = () => {
   return (
     <nav>
       {isUserAuthenticated ? (
-        <div className="flex items-center justify-between max-w-[1440px] mx-auto ">
+        <div className="flex items-center justify-between max-w-[1440px] mx-auto px-4 ">
           <h1 className="text-3xl">BestMovies</h1>
           <ul className="hidden gap-4 md:flex">
             <li>
@@ -47,7 +47,7 @@ const NavBar = () => {
           </div>
         </div>
       ) : (
-        <div className="flex items-center justify-between max-w-[1440px] mx-auto ">
+        <div className="flex items-center justify-between max-w-[1440px] mx-auto px-4">
           <h1 className="text-3xl">BestMovies</h1>
           <ul className="hidden gap-4 md:flex">
             <li>
@@ -87,8 +87,8 @@ const NavBar = () => {
         <div
           className={
             burger
-              ? "fixed left-0 top-20 w-full md:hidden"
-              : "fixed left-0 top-[-100%] w-full"
+              ? "fixed left-0 top-20 w-full md:hidden px-4"
+              : "fixed left-0 top-[-100%] w-full px-4"
           }
         >
           <ul className="flex flex-col gap-4 items-center py-1">
@@ -114,8 +114,8 @@ const NavBar = () => {
         <div
           className={
             burger
-              ? "fixed left-0 top-20 w-full md:hidden"
-              : "fixed left-0 top-[-100%] w-full"
+              ? "fixed left-0 top-20 w-full md:hidden px-4"
+              : "fixed left-0 top-[-100%] w-full px-4"
           }
         >
           <ul className="flex flex-col gap-4 items-center py-1">
