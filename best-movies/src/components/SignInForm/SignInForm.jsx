@@ -32,8 +32,8 @@ const SignInForm = () => {
   };
   return (
     <div className="flex flex-col justify-center items-center h-screen text-white">
-      <h1>Sign In</h1>
-      <div className="flex flex-col w-fit border-2 border-gray-400 rounded-md py-5 px-5 gap-5">
+      <h1 className="text-3xl mb-4">Sign In</h1>
+      <div className="flex flex-col w-fit border-2 border-gray-400 rounded-md py-12 px-12 gap-5">
         <input
           type="text"
           name="userName"

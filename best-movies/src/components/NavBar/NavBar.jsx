@@ -18,9 +18,9 @@ const NavBar = () => {
   return (
     <nav>
       {isUserAuthenticated ? (
-        <div className="flex items-center justify-between max-w-[1440px] mx-auto px-4 ">
+        <div className="flex items-center justify-between max-w-[1440px] mx-auto px-4 py-4 ">
           <h1 className="text-3xl">BestMovies</h1>
-          <ul className="hidden gap-4 md:flex">
+          <ul className="hidden gap-4 md:flex text-lg">
             <li>
               <NavLink to={routes.movies}>Films</NavLink>
             </li>
@@ -47,9 +47,9 @@ const NavBar = () => {
           </div>
         </div>
       ) : (
-        <div className="flex items-center justify-between max-w-[1440px] mx-auto px-4">
+        <div className="flex items-center justify-between max-w-[1440px] mx-auto px-4 py-4">
           <h1 className="text-3xl">BestMovies</h1>
-          <ul className="hidden gap-4 md:flex">
+          <ul className="hidden gap-4 md:flex text-lg">
             <li>
               <NavLink to={routes.movies}>Films</NavLink>
             </li>
@@ -91,7 +91,7 @@ const NavBar = () => {
               : "fixed left-0 top-[-100%] w-full px-4"
           }
         >
-          <ul className="flex flex-col gap-4 items-center py-1">
+          <ul className="flex flex-col gap-4 items-center py-1 text-lg">
             <li>
               <NavLink to={routes.movies}>Films</NavLink>
             </li>
@@ -118,7 +118,7 @@ const NavBar = () => {
               : "fixed left-0 top-[-100%] w-full px-4"
           }
         >
-          <ul className="flex flex-col gap-4 items-center py-1">
+          <ul className="flex flex-col gap-4 items-center py-1 text-lg">
             <li>
               <NavLink to={routes.movies}>Films</NavLink>
             </li>

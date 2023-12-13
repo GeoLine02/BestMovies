@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import MovieList from "../../components/Movies/MovieList";
+import Footer from "../../components/Footer/Footer";
 
 const Movies = () => {
   return (
@@ -11,6 +12,9 @@ const Movies = () => {
       <main>
         <MovieList />
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 };
