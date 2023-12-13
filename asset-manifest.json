@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/BestMovies/static/css/main.aa1fb47d.css",
-    "main.js": "/BestMovies/static/js/main.ecc80c5f.js",
+    "main.css": "/BestMovies/static/css/main.3dd3b92f.css",
+    "main.js": "/BestMovies/static/js/main.5381f369.js",
     "index.html": "/BestMovies/index.html",
-    "main.aa1fb47d.css.map": "/BestMovies/static/css/main.aa1fb47d.css.map",
-    "main.ecc80c5f.js.map": "/BestMovies/static/js/main.ecc80c5f.js.map"
+    "main.3dd3b92f.css.map": "/BestMovies/static/css/main.3dd3b92f.css.map",
+    "main.5381f369.js.map": "/BestMovies/static/js/main.5381f369.js.map"
   },
   "entrypoints": [
-    "static/css/main.aa1fb47d.css",
-    "static/js/main.ecc80c5f.js"
+    "static/css/main.3dd3b92f.css",
+    "static/js/main.5381f369.js"
   ]
 }
