@@ -12,7 +12,7 @@ export function fetchMoviesData(dispatch) {
   dispatch(startMovisFetchingLoaderAction());
   fetchData("https://imdb-top-100-movies.p.rapidapi.com/top100movies", {
     headers: {
-      "X-RapidAPI-Key": "ed71da4d8fmsh072006ce441740fp1de950jsn64ed97365c3d",
+      "X-RapidAPI-Key": "4eec0ff13emshdbdf906f9746e4cp1b5063jsnff24ea366eda",
       "X-RapidAPI-Host": "imdb-top-100-movies.p.rapidapi.com",
     },
   })
@@ -28,7 +28,7 @@ export function fetchMovieDetails(dispatch, movie, setYoutubeId) {
   dispatch(startMoviesDetailsFetchingLoader());
   fetchData(`https://imdb-top-100-movies.p.rapidapi.com/top${movie}`, {
     headers: {
-      "X-RapidAPI-Key": "ed71da4d8fmsh072006ce441740fp1de950jsn64ed97365c3d",
+      "X-RapidAPI-Key": "4eec0ff13emshdbdf906f9746e4cp1b5063jsnff24ea366eda",
       "X-RapidAPI-Host": "imdb-top-100-movies.p.rapidapi.com",
     },
   })
